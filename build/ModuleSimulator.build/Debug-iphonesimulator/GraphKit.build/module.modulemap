@@ -1,0 +1,11 @@
+framework module GraphKit {
+  umbrella header "GraphKit.h"
+
+  export *
+  module * { export * }
+}
+
+module GraphKit.Swift {
+    header "GraphKit-Swift.h"
+    requires objc
+}

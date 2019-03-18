@@ -1,0 +1,10 @@
+framework module GraphKit {
+  umbrella header "GraphKit.h"
+
+  export *
+  module * { export * }
+}
+
+module GraphKit.__Swift {
+    exclude header "GraphKit-Swift.h"
+}

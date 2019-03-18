@@ -1,0 +1,10 @@
+framework module FnguideKit {
+  umbrella header "FnguideKit.h"
+
+  export *
+  module * { export * }
+}
+
+module FnguideKit.__Swift {
+    exclude header "FnguideKit-Swift.h"
+}

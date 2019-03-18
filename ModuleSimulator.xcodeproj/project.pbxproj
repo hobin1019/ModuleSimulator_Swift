@@ -26,6 +26,7 @@
 		17A6620121DDEC8400FBB6E2 /* FnguideKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 17A661FF21DDEC8400FBB6E2 /* FnguideKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17A6620A21DDEC9500FBB6E2 /* HttpConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A6620921DDEC9500FBB6E2 /* HttpConnect.swift */; };
 		17BFA4B021DEEBF900B07C15 /* Crypter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BFA4AF21DEEBF900B07C15 /* Crypter.swift */; };
+		17CE745721E73022005D6C55 /* HalfDounutGraphMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17CE745621E73022005D6C55 /* HalfDounutGraphMaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -82,6 +83,7 @@
 		17A6620021DDEC8400FBB6E2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		17A6620921DDEC9500FBB6E2 /* HttpConnect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpConnect.swift; sourceTree = "<group>"; };
 		17BFA4AF21DEEBF900B07C15 /* Crypter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypter.swift; sourceTree = "<group>"; };
+		17CE745621E73022005D6C55 /* HalfDounutGraphMaker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HalfDounutGraphMaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				1762C37121E330A6000AEC19 /* Info.plist */,
 				1762C39421E335EF000AEC19 /* GraphMakerManager.swift */,
 				1762C38E21E335E4000AEC19 /* BarGraphMaker.swift */,
+				17CE745621E73022005D6C55 /* HalfDounutGraphMaker.swift */,
 				1762C38D21E335E4000AEC19 /* DounutGraphMaker.swift */,
 				1762C38C21E335E4000AEC19 /* LineGradientGraphMaker.swift */,
 				1762C38B21E335E4000AEC19 /* LineGraphMaker.swift */,
@@ -338,6 +341,7 @@
 				1762C39021E335E4000AEC19 /* LineGraphMaker.swift in Sources */,
 				1762C39321E335E4000AEC19 /* BarGraphMaker.swift in Sources */,
 				1762C39521E335EF000AEC19 /* GraphMakerManager.swift in Sources */,
+				17CE745721E73022005D6C55 /* HalfDounutGraphMaker.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +570,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR3V86893;
+				DEVELOPMENT_TEAM = MH34D68P9B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
@@ -596,7 +600,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = DAR3V86893;
+				DEVELOPMENT_TEAM = MH34D68P9B;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";

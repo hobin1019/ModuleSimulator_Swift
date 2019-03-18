@@ -1,0 +1,10 @@
+version: "Apple Swift version 4.2.1 (swiftlang-1000.11.42 clang-1000.11.45.1)"
+options: "7369c88dc129b29145c7c1db8df1397a"
+build_time: [1546991371, 981257000]
+inputs:
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/LineGradientGraphMaker.swift": [1546845930, 0]
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/LinesGraphMaker.swift": [1546931486, 0]
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/DounutGraphMaker.swift": [1546845930, 0]
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/LineGraphMaker.swift": [1546845930, 0]
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/BarGraphMaker.swift": [1546845930, 0]
+  "/Users/wisefn/Desktop/Hobin/\u1106\u1169\u1103\u1172\u11AF/ModuleSimulator/GraphKit/GraphMakerManager.swift": [1546931476, 0]

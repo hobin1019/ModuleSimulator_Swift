@@ -1,0 +1,13 @@
+{
+  'version': 0,
+  'case-sensitive': 'false',
+  'roots': [{
+    'type': 'directory',
+    'name': "/Users/wisefn/Library/Developer/Xcode/DerivedData/ModuleSimulator-gvqypakoftctoudtfevxeeryvxgw/Build/Products/Debug-iphonesimulator/GraphKit.framework/Modules"
+    'contents': [{
+      'type': 'file',
+      'name': "module.modulemap",
+      'external-contents': "/Users/wisefn/Desktop/Hobin/모듈/ModuleSimulator/build/ModuleSimulator.build/Debug-iphonesimulator/GraphKit.build/unextended-module.modulemap",
+    }]
+  }]
+}

@@ -15,15 +15,14 @@ public class HttpConnect {
         let url: URL = URL(string: urlStr)!
         let session = URLSession.shared
         var request = URLRequest(url: url)
+        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
+
         if params != nil {
-            do {
-                request.httpBody = try JSONSerialization.data(withJSONObject: params, options: .prettyPrinted)
-            } catch let error {
-                NSLog("parameter error : \(error)")
-            }
+            let jsonData: Data = try! JSONSerialization.data(withJSONObject: params)
+            request.httpBody = jsonData
         }
-        
+    
         let sem = DispatchSemaphore(value: 0)
         let task = session.dataTask(with: request as URLRequest) {
             (data, response, error) in
@@ -56,9 +55,7 @@ public class HttpConnect {
 
         do {
             result = try JSONSerialization.jsonObject(with: data!, options: []) as? NSDictionary
-            NSLog(result.description) // test
         } catch let error {
-            NSLog("parameter error : \(error)")
             result = ["error" : "no data"]
         }
         

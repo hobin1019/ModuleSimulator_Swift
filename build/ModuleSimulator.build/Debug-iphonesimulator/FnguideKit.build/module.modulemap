@@ -1,0 +1,11 @@
+framework module FnguideKit {
+  umbrella header "FnguideKit.h"
+
+  export *
+  module * { export * }
+}
+
+module FnguideKit.Swift {
+    header "FnguideKit-Swift.h"
+    requires objc
+}

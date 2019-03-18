@@ -33,7 +33,7 @@ class ViewController: UIViewController {
                                      [10, 20, 30, 40, 50, 60, 70, 80, 90, 100]]
         
         var graphMaker: GraphMaker!
-        switch count % 5 {
+        switch count % 6 {
         case 0:
             graphView.backgroundColor = .black
             graphMaker = BarGraphMaker(size: graphView.frame.size, data: barGraphData as NSArray) as BarGraphMaker
@@ -49,6 +49,9 @@ class ViewController: UIViewController {
         case 4:
             graphView.backgroundColor = .black
             graphMaker = LinesGraphMaker(size: graphView.frame.size, data: linesGraphData as NSArray) as LinesGraphMaker
+        case 5:
+            graphView.backgroundColor = .black
+            graphMaker = HalfDounutGraphMaker(size: graphView.frame.size, data: [30] as NSArray) as HalfDounutGraphMaker
         default:
             graphMaker = nil
         }
@@ -80,9 +83,19 @@ class ViewController: UIViewController {
         
 //        textView.text = HttpConnect.getStringResp(urlStr: "http://api.wisereport.co.kr/Common/GET_SERVER_TIME", params: nil)
         
-        let result = HttpConnect.getDicResp(urlStr: "http://api.wisereport.co.kr/Common/GET_SERVER_TIME", params: nil)
-        textView.text = result.description
-        NSLog("result : \(result.value(forKey: "returnMessage")!)")
+//        NSLog("\((["user_id":"hobin1019", "mobile_uuid" : "mobile_uuid"] as NSDictionary).description)")
+//        let result = HttpConnect.getDicResp(urlStr: "http://mobiletest.wisefn.com:2019/api/Mobile/CheckMobileUser", params: ["user_id" : "hobin1019", "mobile_uuid" : "mobile_uuid"])
+//        textView.text = result.description
+        
+        
+//        let result = HttpConnect.getDicResp(urlStr: "http://mobiletest.wisefn.com:2019/api/Mobile/Test", params: nil)
+//        textView.text = result.description
+        
+        let mobileApiUrl = "http://mobiletest.wisefn.com:2019/api/Mobile/"
+        let respDic: NSDictionary = HttpConnect.getDicResp(urlStr: "\(mobileApiUrl)GetServerState", params: ["server_name" : "hobinCom",])
+        NSLog("\(respDic.description)")
+        let result = respDic.value(forKey: "result") as? [NSDictionary] ?? []
+        NSLog("\(result)")
     }
     
     
