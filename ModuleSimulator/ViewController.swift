@@ -70,6 +70,13 @@ class ViewController: UIViewController {
         let decryptedString: String = String(data: cc.decryptAES(value: encryptedData), encoding: String.Encoding.utf8)!
         
         textView.text = "\(auth!)\n \n\(decryptedString)"
+        
+        
+        // test 2019 03 20
+        let keyTmp = "fngUideMobi1epUshmessage"
+        let c = Crypter(key: keyTmp, mode: AES_MODE.ECB)
+        let ed = c.encryptAES(value: "hi".data(using: .utf8)!)
+        textView.text = "test 2019 03 20\n\(ed.base64EncodedString())"
     }
     @IBAction func HttpButotn(_ sender: Any) {
 //        textView.text = HttpConnect.getStringResp(urlStr: "http://wiseon.wisefn.com/Common/GetFaqList", params: ["search" : "",

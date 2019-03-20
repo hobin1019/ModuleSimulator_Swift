@@ -22,8 +22,8 @@ public class Crypter {
     var encKey = ""
     var options = CCOptions(kCCOptionPKCS7Padding | kCCOptionECBMode)
     public init(key: String, mode: AES_MODE) {
-        if key.count != kCCKeySizeAES128 && encKey.count != kCCKeySizeAES192 && encKey.count != kCCKeySizeAES256 {
-            NSLog("[FnguideKit Crypter Error] wrong key size")
+        if key.count != kCCKeySizeAES128 && key.count != kCCKeySizeAES192 && key.count != kCCKeySizeAES256 {
+            NSLog("[FnguideKit Crypter Error] wrong key size : \(key.count)")
             return
         }
         encKey = key
