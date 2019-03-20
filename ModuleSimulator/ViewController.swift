@@ -60,9 +60,9 @@ class ViewController: UIViewController {
         count += 1
     }
     @IBAction func EncButton(_ sender: Any) {
-        let keyValue128 = "wisemobilereport"
-        let keyValue192 = "wisemobilereportwisemobi"
-        let keyValue256 = "wisemobilereportwisemobilereport"
+        let keyValue128 = "wisemobilereport" // 16 char
+        let keyValue192 = "wisemobilereportwisemobi" // 24 char
+        let keyValue256 = "wisemobilereportwisemobilereport" // 32 char
         
         let cc = Crypter(key: keyValue128, mode: AES_MODE.ECB)
         let auth = cc.getAuth(value: "3821197D-B70A-4EC2-BDE2-EA16FAEAFAC2|mtest|20190104155136", base64Repeat: 1)
