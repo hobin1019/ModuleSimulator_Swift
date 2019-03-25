@@ -10,7 +10,7 @@ import Foundation
 
 public class HttpConnect {
     
-    public class func getDataResp(urlStr: String, params: NSDictionary!) -> Data! {
+    public class func postDataResp(urlStr: String, params: NSDictionary!) -> Data! {
         var result: Data! = nil
         let url: URL = URL(string: urlStr)!
         let session = URLSession.shared
@@ -37,18 +37,18 @@ public class HttpConnect {
         return result
     }
     
-    public class func getStringResp (urlStr: String, params: NSDictionary!) -> String {
+    public class func postStringResp (urlStr: String, params: NSDictionary!) -> String {
         var result: String = ""
-        let data = getDataResp(urlStr: urlStr, params: params)
+        let data = postDataResp(urlStr: urlStr, params: params)
         if(data != nil) {
             result = String(data: data!, encoding: String.Encoding.utf8)!
         }
         return result
     }
     
-    public class func getDicResp (urlStr: String, params: NSDictionary!) -> NSDictionary {
+    public class func postDicResp (urlStr: String, params: NSDictionary!) -> NSDictionary {
         var result: NSDictionary! = ["yet" : "no data"]
-        let data = getDataResp(urlStr: urlStr, params: params)
+        let data = postDataResp(urlStr: urlStr, params: params)
         if(data == nil) {
             result = ["error" : "no data"]
         }
@@ -62,4 +62,7 @@ public class HttpConnect {
         return result
     }
     
+//    public class func getDicRest(url: String, params: NSDictionary!) -> NSDictionary {
+//        
+//    }
 }
