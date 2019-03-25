@@ -62,7 +62,25 @@ public class HttpConnect {
         return result
     }
     
-//    public class func getDicRest(url: String, params: NSDictionary!) -> NSDictionary {
-//        
-//    }
+    public class func getDicResp(url: String) -> NSDictionary {
+        var resultData: Data! = nil
+        let sem = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
+            if error == nil {
+                resultData = data
+            }
+            sem.signal()
+        }
+        task.resume()
+        sem.wait()
+        
+        var result: NSDictionary! = ["yet" : "no data"]
+        do {
+            result = try JSONSerialization.jsonObject(with: resultData!, options: []) as? NSDictionary
+        } catch let error {
+            result = ["error" : "no data"]
+        }
+        
+        return result
+    }
 }
